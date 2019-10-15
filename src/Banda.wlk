@@ -45,9 +45,14 @@ class Banda  {
 	
 	// %%% Punto 4 %%%
 	
-	method agregarteA(unEvento) {
+	method agregateA(unEvento) {
 		unEvento.agregarA(self)
 	}
+	
+	// punto 5
+	//ocurre en evento
+	
+	//punto 6
 	
 }
 
