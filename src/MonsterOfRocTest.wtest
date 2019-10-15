@@ -1,0 +1,130 @@
+import Banda.*
+import Evento.*
+import Disco.*
+
+describe "Test Monster Of Rock 2 Entrega"{
+	//van todos los objetos q necesitemos para los tests
+	// DISCOS pearl
+	const ten =new Disco(nombre = "Ten", duracionEnMinutos = 53, anioPublicacion = 1991, discosVendidos = 11)
+	const vs =new Disco(nombre = "Vs", duracionEnMinutos = 46, anioPublicacion = 1993, discosVendidos = 2)
+	const noCode =new Disco(nombre = "No Code", duracionEnMinutos = 49, anioPublicacion = 1996, discosVendidos = 3)
+	const riotAct =new Disco(nombre = "Riot Act", duracionEnMinutos = 54, anioPublicacion = 2002, discosVendidos = 1.5)
+	const backspacer =new Disco(nombre = "Backspacer", duracionEnMinutos = 36, anioPublicacion = 2009, discosVendidos = 2)
+	
+	const pearlJean = new BandaFundacional(
+		
+		integrantesOriginales = ["Eddie Vedder", "Mike McCready", "Stone Gossard", "Jeff Ament"], 
+		anioDeFundacion = 1990, 
+		nombre = "Pearl Jam", 
+		integrantes = ["Eddie Vedder", "Mike McCready", "Stone Gossard", "Jeff Ament", "Matt Cameron", "Boom Gaspar"], 
+		generos = ["Grunge", "Rock Alternativo"],
+		discos = [ten,vs,noCode,riotAct,backspacer]
+	)
+	
+	//discos renga
+	const esquivandoCharcos =new Disco(nombre = "Esquivando charcos", duracionEnMinutos = 40, anioPublicacion = 1991, discosVendidos = 0.3)
+	const despedazadoPorMilPartes =new Disco(nombre = "Despedazado por mil partes", duracionEnMinutos = 54, anioPublicacion = 1996, discosVendidos = 1.3)
+	const laRengaDisco =new Disco(nombre = "La Renga", duracionEnMinutos = 41, anioPublicacion = 1998, discosVendidos = 1)
+	
+	const laRenga = new BandaDisquera(
+		nombre = "La Renga" , 
+		integrantes = ["Chizzo", "Gabriel Iglesias", "Jorge Iglesias" , "Manuel Varela"],
+		generos = ["Heavy Metal","Hard Rock"],
+		discos = [esquivandoCharcos,despedazadoPorMilPartes,laRengaDisco]
+	)
+	//Discos IronM;
+	
+	const ironMaidenDisco =new Disco(nombre = "Iron Maiden", duracionEnMinutos = 40, anioPublicacion = 1980, discosVendidos = 2)
+	const theNumberOfTheBeast =new Disco(nombre = "The Number of the Beast", duracionEnMinutos = 40, anioPublicacion = 1982, discosVendidos = 14)
+	const powerSlave =new Disco(nombre = "Powerslave", duracionEnMinutos = 50, anioPublicacion = 1984, discosVendidos = 3)
+	const somewhereInTime =new Disco(nombre = "Somewhere in Time", duracionEnMinutos = 51, anioPublicacion = 1986, discosVendidos = 2.5)
+	const braveNewWorld =new Disco(nombre = "Brave New World", duracionEnMinutos = 66, anioPublicacion = 2000, discosVendidos = 6)
+	const theBookOfSouls =new Disco(nombre = "The Book of Souls", duracionEnMinutos = 92, anioPublicacion = 2015, discosVendidos = 3)
+	
+	const ironMaiden = new BandaFundacional(
+		integrantesOriginales = ["Steve Harris", "Paul Di'Anno", "Dave Murray", "Dennis Stratton", "Clive Burr"], 
+		anioDeFundacion = 1975, 
+		nombre = "Iron Maiden", 
+		integrantes = ["Steve Harris", "Dave Murray", "Bruce Dickinson", "Nicko McBrain", "Adrian Smith", "Janick Gers"], 
+		discos = [ironMaidenDisco,theNumberOfTheBeast,powerSlave,somewhereInTime,braveNewWorld,theBookOfSouls], 
+		generos = "Heavy Metal"
+	)
+	//Disco Red hod 
+	
+	const theRedHotChiliPeppers = new Disco(nombre = "The Red Hot Chili Peppers", duracionEnMinutos = 32, anioPublicacion = 1984, discosVendidos = 0.5)
+	const californication = new Disco(nombre = "Californication", duracionEnMinutos = 56, anioPublicacion = 1999, discosVendidos = 16)//Este es el disco que siempre presentan.
+	const stadiumArcadium = new Disco(nombre = "Stadium Arcadium", duracionEnMinutos = 122, anioPublicacion = 2006, discosVendidos = 10)
+	const theGetaway = new Disco(nombre = "The Getaway", duracionEnMinutos = 53, anioPublicacion = 2016, discosVendidos = 1)
+	
+	const redHotChillPeppers = new BandaEstructurada(
+		edad = 36, 
+		discoAPresentar = californication, 
+		nombre = "Red Hot Chilli Peppers", 
+		integrantes = ["Anthony Kiedis", "Michael Flea Balzary","Chad Smith", "Josh Klinghoffer"], 
+		//Sus integrantes originales fueron: Dave Mustaine, David Ellefson, Greg Hardevidt,Lee Rausch
+		discos = [theRedHotChiliPeppers,californication,stadiumArcadium,theGetaway], 
+		generos = ["Rock Alternativo", "Funk Metal"]
+	)
+	//Disco Megadeth 
+	
+	const killingIsMyBusiness = new Disco(nombre = "Killing Is My Business... And Business Is Good!", duracionEnMinutos = 31, anioPublicacion = 1986, discosVendidos = 1)
+	const rustInPeace = new Disco(nombre = "Rust in Peace", duracionEnMinutos = 40, anioPublicacion = 1990, discosVendidos = 1.4)
+	const countdownToExtinction = new Disco(nombre = "Countdown to Extinction", duracionEnMinutos = 47, anioPublicacion = 1991, discosVendidos = 2)
+	const youthanasia = new Disco(nombre = "Youthanasia", duracionEnMinutos = 50, anioPublicacion = 1994, discosVendidos = 2.6)
+	
+	const megadeth = new BandaFundacional(
+		integrantesOriginales = ["Dave Mustaine", "David Ellefson", "Greg Hardevidt","Lee Rausch"], 
+		anioDeFundacion = 1983, 
+		nombre = "Megadeth", 
+		integrantes = ["Dave Mustaine", "David Ellefson", "Kiko Loureiro", "Dirk Verveuren"], 
+		discos = [killingIsMyBusiness,rustInPeace,countdownToExtinction,youthanasia], 
+		generos = ["Trash Metal", "Heavy Metal"]
+	)
+	
+	//Disco Metallica
+	const killEmAll = new Disco(nombre = "Kill 'Em All", duracionEnMinutos = 51, anioPublicacion = 1983, discosVendidos = 7.5)
+	const masterOfPuppets = new Disco(nombre = "Master of Puppets", duracionEnMinutos = 54, anioPublicacion = 1986, discosVendidos = 14)
+	const metallicaDisco = new Disco(nombre = "Metallica", duracionEnMinutos = 62, anioPublicacion = 1991, discosVendidos = 31)//Este es el disco que siempre presentan.
+	const reLoad = new Disco(nombre = "ReLoad", duracionEnMinutos = 76, anioPublicacion = 1997, discosVendidos = 7.5)
+	
+	const metallica = new BandaEstructurada(
+		edad = 38, 
+		discoAPresentar = metallicaDisco, 
+		nombre = "Metallica", 
+		integrantes = ["James Hetfield", "Lars Ulrich", "Kirk Hammet", "Robert Trujillo"], 
+		discos = [killEmAll,masterOfPuppets,metallicaDisco,reLoad], 
+		generos = ["Heavy Metal", "Trash Metal"]
+	)	
+	
+	// Disco Foo Fighters, fundacional
+	
+	const fooFightersDisco = new Disco(nombre = "Foo Fighters", duracionEnMinutos = 44, anioPublicacion = 1995, discosVendidos = 1)
+	const theColourAndTheShape = new Disco(nombre = "The Colour and the Shape", duracionEnMinutos = 46, anioPublicacion = 1997, discosVendidos = 2.4)
+	const echoesSilencePatienceGrace = new Disco(nombre = "Echoes, Silence, Patience & Grace", duracionEnMinutos = 51, anioPublicacion = 2007, discosVendidos = 1)
+	const concreteAndGold = new Disco(nombre = "Concrete and Gold", duracionEnMinutos = 48, anioPublicacion = 2017, discosVendidos = 1)
+	
+	const fooFighter = new BandaFundacional(
+		integrantesOriginales = ["Dave Grohl", "Pat Smear", "Nate Mendel", "William	Goldsmith"], 
+		anioDeFundacion = 1994, 
+		nombre = "Foo Fighters", 
+		integrantes = ["Dave Grohl", "Pat Smear", "Nate Mendel", "Taylor Hawkins", "Chris Shiflett","Rami Jaffee"], 
+		discos = [fooFightersDisco,theColourAndTheShape,echoesSilencePatienceGrace,concreteAndGold], 
+		generos = ["Hard Rock", "Post Grunge"]
+	)
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	fixture{
+		//para poner acciones de configuracion 
+	}	
+	
+	test "La edad de Iron Maiden es de 44." {
+		
+	}
+}

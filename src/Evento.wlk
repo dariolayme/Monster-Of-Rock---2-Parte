@@ -21,7 +21,7 @@ class Evento {
 	//method incluyeElGenero(unGenero) //punto7
 	
 	method incluyeElGenero(unGenero){
-		return bandaPrincipal.genero().equals(unGenero)		
+		return bandaPrincipal.generos().contains(unGenero)		
 	}
 	//punto 8
 	
@@ -98,7 +98,7 @@ class Recital inherits Festival {
 	
 	
 	override method comparteGenero(unaBanda){
-		return unaBanda.genero().equals(bandaPrincipal.genero())
+		return unaBanda.generos().equals(bandaPrincipal.generos())
 	}
 	override method hayCupo(unaBanda) {
 		return bandasSecundarias.size() < 3 && self.comparteGenero(unaBanda)
@@ -112,7 +112,7 @@ class Recital inherits Festival {
 	}
 	
 	override method incluyeElGenero(unGenero){
-		return super(unGenero) || bandasSecundarias.map({bandaS => bandaS.genero()}).contains(unGenero)		
+		return super(unGenero) || bandasSecundarias.map({bandaS => bandaS.generos()}).contains(unGenero)//REVISAR		
 	}
 }
 

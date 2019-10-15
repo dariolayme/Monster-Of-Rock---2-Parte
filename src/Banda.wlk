@@ -1,8 +1,8 @@
 class Banda  {
 	var nombre
 	var property integrantes
-	var property discos = []
-	var genero
+	var property discos 
+	var generos 
 	
 	method edad ()
 	
@@ -41,7 +41,7 @@ class Banda  {
 		return unEvento.participa(self)
 	}
 	
-	method genero() = genero //getter
+	method generos() = generos //getter
 	
 	// %%% Punto 4 %%%
 	
